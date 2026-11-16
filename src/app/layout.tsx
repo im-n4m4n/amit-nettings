@@ -2,7 +2,10 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.URL ?? "https://effortless-pegasus-52bab1.netlify.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Amit Nettings — Mosquito Nets, Bird Net & Invisible Grill",
     template: "%s | Amit Nettings",
